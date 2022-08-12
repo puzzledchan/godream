@@ -25,7 +25,7 @@ func main() {
 	addr := make(chan string)
 	go startServer(addr) // 开启监听
 
-	// in fact, following code is like a simple geerpc client
+	// in fact, following code is like a simple gorpc client
 	conn, _ := net.Dial("tcp", <-addr) // client 处理
 	defer func() { _ = conn.Close() }()
 
