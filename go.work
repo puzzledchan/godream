@@ -1,6 +1,6 @@
 go 1.18
 
-
 use (
-	./gocache/day1
+	./gorpc/day7
+	./gocache/day7
 )

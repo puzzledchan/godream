@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package cachepb;
+option go_package = "../cachepb";
+// ! request group and key
+message Request {
+  string group = 1;
+  string key = 2;
+}
+
+// ! response value bytes
+message Response {
+  bytes value = 1;
+}
+
+// ! service only
+service GroupCache {
+  rpc Get(Request) returns (Response);
+}
